@@ -8,4 +8,4 @@ const read = (path) => {
 	})
 }
 console.log(read('lessons.json'));
-//module.exports = read;
+module.exports = read;
