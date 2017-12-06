@@ -2,9 +2,9 @@ const fs = require('fs');
 
 const read = (path) => {
 	fs.readFile(path, 'utf8', (err, data) => {
-		console.log(data)
 		if (err) throw err;
-		return JSON.parse(data);
+		const les = JSON.parse(data);
+		return les;
 	})
 }
 console.log(read('lessons.json'));
