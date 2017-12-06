@@ -1,0 +1,27 @@
+{
+  "name": "my_serv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon babel-node index.js --presets es2015,stage-2",
+    "test": "mocha --compilers js:babel-core/register",
+    "gulp": "gulp",
+    "eslint": "eslint"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.12.1",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}
