@@ -1,11 +1,8 @@
 const fs = require('fs');
 
 const read = (path) => {
-	fs.readFile(path, 'utf8', (err, data) => {
-		if (err) throw err;
-		const les = JSON.parse(data);
-		return les;
-	})
-}
+	const lessons = fs.readFileSync(path, 'utf8');
+	return JSON.parse(lessons);
+};
 console.log(read('lessons.json'));
 module.exports = read;
