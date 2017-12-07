@@ -3,13 +3,17 @@ const read = require('./src/read');
 
 const solution = () => {
 	const app = express();
-	const lessons = read('src/lessons.txt');
+	const lessons = read('src/lessons.json');
 	app.get('/', (req, res) => {
 		const date = new Date()
-		res.send(lessons.Monday.first);
-		res.send(422);
-		//res.render('index.pug', lessons.day);
+		const day = date.getDay();
+		res.redirect(`/${day}`);
 	});
+	app.get('/:id', (req, res) => {
+		const day = req.params.id;
+		res.render('index');
+		res.status(422)
+	})
 	return app;
 }
 solution().listen(8080);
