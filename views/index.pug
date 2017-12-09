@@ -1,0 +1,6 @@
+h1=currentLessons.day
+a(href=`/${Number(day) - 1}`) Prev	
+a(href=`/${Number(day) + 1}`) Next
+div
+	for lesson in lessons 
+		p=lesson
