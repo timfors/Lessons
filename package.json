@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js ",
+    "start": "nodemon index.js ",
+    "test": "mocha --compilers js:babel-core/register",
+    "gulp": "gulp",
+    "eslint": "eslint"
   },
   "author": "",
   "license": "ISC",
