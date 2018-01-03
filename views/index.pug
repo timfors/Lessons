@@ -1,6 +1,6 @@
 h1=currentLessons.day
-a(href=`/${Number(day) - 1}`) Prev	
-a(href=`/${Number(day) + 1}`) Next
+a(href=`/${Number(day) - 1}`) Следующий	
+a(href=`/${Number(day) + 1}`) Предыдущий 
 div
-	for lesson in lessons 
+	for lesson in currentLessons.lessons 
 		p=lesson

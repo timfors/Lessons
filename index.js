@@ -19,10 +19,7 @@ const solution = () => {
 			res.redirect('/6');
 		}
 		const currentLessons = allLessons[`${day}`];
-		const lessons = Object.keys(currentLessons)
-		.map(key => currentLessons[key]);
-		lessons.pop();
-		res.render('index', { currentLessons, lessons, day } );
+		res.render('index', { currentLessons, day } );
 		res.status(422)
 	})
 	return app;
