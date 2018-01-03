@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon babel-node index.js --presets es2015,stage-2",
+    "start": "node index.js",
     "test": "mocha --compilers js:babel-core/register",
     "gulp": "gulp",
     "eslint": "eslint"
