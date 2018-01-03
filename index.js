@@ -26,4 +26,4 @@ const solution = () => {
 	})
 	return app;
 }
-solution().listen(8080);
+solution();
