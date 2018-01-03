@@ -1,5 +1,6 @@
 const express = require('express');
 const read = require('./src/read');
+var cool = require('cool-ascii-faces');
 
 const solution = () => {
 	const app = express();
@@ -19,7 +20,8 @@ const solution = () => {
 			res.redirect('/6');
 		}
 		const currentLessons = allLessons[`${day}`];
-		res.render('index', { currentLessons, day } );
+		const face = cool();
+		res.render('index', { currentLessons, day, face } );
 		res.status(422)
 	})
 	return app;
