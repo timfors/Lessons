@@ -9,15 +9,20 @@ const solution = () => {
 	app.get('/', (req, res) => {
 		const date = new Date()
 		const day = date.getDay();
+		if (date.getHours() >= 16){
+			day += 1;
+			}
 		res.redirect(`/${day}`);
 	});
 	app.get('/:id', (req, res) => {
 		const day = req.params.id;
 		if (day == '7') {
 			res.redirect('/1');
+			return;
 		}
 		if (day == '0') {
 			res.redirect('/6');
+			return;
 		}
 		const currentLessons = allLessons[`${day}`];
 		const face = cool();
