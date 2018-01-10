@@ -1,5 +1,7 @@
 h1=currentLessons.day
-a(href=`/${Number(day) - 1}`) Предудущий 	
+a(href=`/${Number(day) - 1}`) Предудущий 
+blockquote
+	a(href=`/`) Сегодня 
 a(href=`/${Number(day) + 1}`) Следующий 
 div
 	for lesson in currentLessons.lessons 
