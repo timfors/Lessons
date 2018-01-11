@@ -8,7 +8,7 @@ const solution = () => {
 	app.set('view engine', 'pug');
 	app.get('/', (req, res) => {
 		const date = new Date()
-		const day = date.getDay();
+		let day = date.getDay();
 		if (date.getHours() >= 16){
 			day += 1;
 			}
