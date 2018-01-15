@@ -1,9 +1,15 @@
-h1=currentLessons.day
-a(href=`/${Number(day) - 1}`) Предудущий 
-blockquote
-	a(href='/') Сегодня 
-a(href=`/${Number(day) + 1}`) Следующий 
-div
-	for lesson in currentLessons.lessons 
-		p=lesson
-	p=face
+doctype html
+html
+	head
+		link(href='main.css', rel='stylesheet')
+		title Уроки
+	body
+		h1=currentLessons.day
+		scan(id="href")
+			a(href=`/${Number(day) - 1}`) Предудущий 
+			a(href='/') Сегодня 
+			a(href=`/${Number(day) + 1}`) Следующий 
+		ol.lessons
+			for lesson in currentLessons.lessons 
+				li.lessons=lesson
+			p.smile=face

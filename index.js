@@ -27,7 +27,6 @@ const solution = () => {
 		const currentLessons = allLessons[`${day}`];
 		const face = cool();
 		res.render('index', { currentLessons, day, face } );
-		res.status(422)
 	})
 	return app;
 }

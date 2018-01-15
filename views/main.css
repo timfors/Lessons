@@ -1,0 +1,22 @@
+ol.lessons {
+	font-size: 35px;
+	margin-left: 200px;
+}
+h1 {
+    margin-top: 0px;
+    margin-left: 200px;
+    margin-bottom: 20px;
+    font-size: 100px
+}
+#href {
+    margin-left: 110px;
+}
+a {
+	text-align: center;
+	font-size: 32px;
+	margin-right: 20px;
+}
+.smile {
+	margin-top: 0px;
+	font-size: 60px;
+}
