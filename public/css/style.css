@@ -1,15 +1,14 @@
 ol.lessons {
 	font-size: 35px;
-	margin-left: 200px;
+	margin-left: 350px;
 }
-h1 {
+.day {
     margin-top: 0px;
-    margin-left: 200px;
+    margin-left: 370px;
     margin-bottom: 20px;
-    font-size: 100px
 }
 #href {
-    margin-left: 110px;
+    margin-left: 200px;
 }
 a {
 	text-align: center;

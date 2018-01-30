@@ -1,15 +1,20 @@
 doctype html
 html
 	head
-		link(href='main.css', rel='stylesheet')
+		link(rel="stylesheet", href="/css/style.css")
+		link(rel='stylesheet', href='/css/bootstrap.css')
 		title Уроки
 	body
-		h1=currentLessons.day
+		script(src="/js/bootstrap.js")
+		script(src="https://code.jquery.com/jquery-3.3.1.js"
+ 				 integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  					crossorigin="anonymous")
+		h1.day=currentLessons.day
 		scan(id="href")
-			a(href=`/${Number(day) - 1}`) Предудущий 
+			a(href=`/${day - 1}`) Предудущий 
 			a(href='/') Сегодня 
-			a(href=`/${Number(day) + 1}`) Следующий 
-		ol.lessons
+			a(href=`/${day + 1}`) Следующий 
+		ol.lessons.contain
 			for lesson in currentLessons.lessons 
 				li.lessons=lesson
 			p.smile=face
