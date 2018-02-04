@@ -1,20 +1,26 @@
 doctype html
 html
 	head
-		link(rel="stylesheet", href="/css/style.css")
 		link(rel='stylesheet', href='/css/bootstrap.css')
+		link(rel="stylesheet", href="/css/style.css")
 		title Уроки
 	body
+		div.container
+			diw.row
+				for day in allLessons
+					div.well
+						h2=day.name
+							button.btn.btn-primary.pull-right(data-toggle="collapse" data-target='#lessons_'+day.name aria-expanded="false" aria-controls='lessons_'+day.name) Посмотреть
+						div.collapse(id='lessons_'+day.name)
+							ol
+								for lesson in day.lessons
+									li=lesson
+								p=smile
+
+		script(src="https://code.jquery.com/jquery-3.3.1.min.js") 
+
 		script(src="/js/bootstrap.js")
-		script(src="https://code.jquery.com/jquery-3.3.1.js"
- 				 integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  					crossorigin="anonymous")
-		h1.day=currentLessons.day
-		scan(id="href")
-			a(href=`/${day - 1}`) Предудущий 
-			a(href='/') Сегодня 
-			a(href=`/${day + 1}`) Следующий 
-		ol.lessons.contain
-			for lesson in currentLessons.lessons 
-				li.lessons=lesson
-			p.smile=face
+					
+
+  			
+		

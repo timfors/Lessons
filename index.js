@@ -13,27 +13,9 @@ const solution = () => {
 	app.set('views', __dirname + '/views');
 
 	app.get('/', (req, res) => {
-		const date = new Date()
-		let day = date.getDay();
-		if (date.getHours() >= 16){
-			day += 1;
-			}
-		res.redirect(`/${day}`);
-	});
-	app.get('/:id', (req, res) => {
-		let day = Number(req.params.id);
-		if (day == '7') {
-			res.redirect('/1');
-			return;
-		}
-		if (day == '0') {
-			res.redirect('/6');
-			return;
-		}
-		const currentLessons = allLessons[`${day}`];
 		const face = cool();
-		res.render('index', { currentLessons, day, face } );
-	})
+		res.render('index', { allLessons, face } );
+	});
 	return app;
 }
 solution().listen(process.env.PORT || 5000, () => 
