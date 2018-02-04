@@ -9,13 +9,13 @@ html
 			diw.row
 				for day in allLessons
 					div.well
-						h2=day.name
+						h2.day=day.name
 							button.btn.btn-primary.pull-right(data-toggle="collapse" data-target='#lessons_'+day.name aria-expanded="false" aria-controls='lessons_'+day.name) Посмотреть
 						div.collapse(id='lessons_'+day.name)
-							ol
+							ol.lessons
 								for lesson in day.lessons
 									li=lesson
-								p=smile
+								p.smile=face
 
 		script(src="https://code.jquery.com/jquery-3.3.1.min.js") 
 

@@ -1,11 +1,8 @@
 ol.lessons {
 	font-size: 35px;
-	margin-left: 350px;
 }
 .day {
-    margin-top: 0px;
-    margin-left: 370px;
-    margin-bottom: 20px;
+ 	font-size: 50px;   
 }
 #href {
     margin-left: 200px;
