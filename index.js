@@ -36,5 +36,5 @@ const solution = () => {
 	})
 	return app;
 }
-solution().listen(8000, () => 
+solution().listen(3000, () => 
 	console.log('Server started'));
