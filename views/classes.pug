@@ -1,0 +1,24 @@
+doctype html
+html
+	head
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel='stylesheet', href='/css/bootstrap.css')
+		link(rel="stylesheet", href="/css/style.css")
+		title Classes
+	body
+		div.container
+			div.row
+				img.img-responsive(src='https://pp.userapi.com/c626417/v626417989/39008/ffunsonXexM.jpg')
+				div.dropup.text-center
+					button.btn.btn-primary.btn-lg.dropdown-toggle(type="button" id="classDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") 
+						small Choose class
+						scan.caret
+					ul.dropdown-menu.lessons(aria-labelledby="classDropdown")
+						for c in classes
+							li
+								a(href='/'+ c)=c
+
+
+		script(src="https://code.jquery.com/jquery-3.3.1.min.js") 
+
+		script(src="/js/bootstrap.js")

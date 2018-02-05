@@ -3,11 +3,21 @@ html
 	head
 		link(rel='stylesheet', href='/css/bootstrap.css')
 		link(rel="stylesheet", href="/css/style.css")
-		title Уроки
+		title=className
 	body
 		div.container
-			diw.row
-				for day in allLessons
+			div.row
+				div.dropdown
+					h2
+						button.btn.btn-primary.btn-lg.dropdown-toggle(type="button" id="classDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")=className 
+							scan.caret
+						ul.dropdown-menu(aria-labelledby="classDropdown")
+							for c in classes
+								li
+									a(href='/'+ c)=c		
+			-let id=0
+			div.row
+				for day in currentClass
 					div.well
 						h2.day=day.name
 							button.btn.btn-primary.pull-right(data-toggle="collapse" data-target='#lessons_'+day.name aria-expanded="false" aria-controls='lessons_'+day.name) Посмотреть
@@ -15,7 +25,8 @@ html
 							ol.lessons
 								for lesson in day.lessons
 									li=lesson
-								p.smile=face
+								p.smile=faces[id]
+								-id+=1
 
 		script(src="https://code.jquery.com/jquery-3.3.1.min.js") 
 
