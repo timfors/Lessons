@@ -1,4 +1,13 @@
-.lessons {
+.dropdown-main {
+   left: 50%;
+   right: auto;
+    text-align: center;
+   transform: translate(-50%, 0);
+ }
+ .img-responsive {
+  margin: auto;
+ }
+ .lessons {
 	font-size: 35px;
 }
 .day {

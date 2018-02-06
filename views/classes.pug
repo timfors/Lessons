@@ -13,7 +13,7 @@ html
 					button.btn.btn-primary.btn-lg.dropdown-toggle(type="button" id="classDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") 
 						small Choose class
 						scan.caret
-					ul.dropdown-menu.lessons(aria-labelledby="classDropdown")
+					ul.dropdown-menu.dropdown-main(aria-labelledby="classDropdown")
 						for c in classes
 							li
 								a(href='/'+ c)=c
