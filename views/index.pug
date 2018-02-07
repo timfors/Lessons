@@ -18,9 +18,9 @@ html
 			-let id=0
 			div.row
 				for day in currentClass
-					div.well
+					div.well(onclick="$('#lessons_" + day.name + "').collapse('toggle')")
 						h2.day=day.name
-							button.btn.btn-primary.pull-right(data-toggle="collapse" data-target='#lessons_'+day.name aria-expanded="false" aria-controls='lessons_'+day.name) Посмотреть
+							scan.glyphicon.glyphicon-triangle-bottom.pull-right
 						div.collapse(id='lessons_'+day.name)
 							ol.lessons
 								for lesson in day.lessons
