@@ -31,4 +31,4 @@ const solution = () => {
 	return app;
 }
 solution().listen(process.env.PORT || 5000, () => 
-	console.log('Server started'));
+console.log('Server started'));
